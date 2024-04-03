@@ -1,0 +1,36 @@
+SQL
+
+CREATE TABLE musicas (
+    id INT [PRIMARY KEY, UNIQUE, NOT NULL], 
+    caminho [VARCHAR(30), UNIQUE, NOT NULL],
+    titulo-musica [VARCHAR(30), UNIQUE, NOT NULL],
+    duração [TIME UNIQUE, NOT NULL],
+    data-postagem [DATE, NOT NULL],
+    cantor [VARCHAR(20), UNIQUE, NOT NULL],
+    compositor [VARCHAR(45), UNIQUE, NOT NULL],
+    poster-musica [VARCHAR(45), UNIQUE, NOT NULL],
+    gênero [VARCHAR(10), UNIQUE, NOT NULL]
+);
+CREATE TABLE artistas (
+    id INT [PRIMARY KEY UNIQUE, NOT NULL], 
+	nome [VARCHAR(45) UNIQUE, NOT NULL],
+	data-nascimento [DATE, NOT NULL], 
+	data-falecimento [DATE, NOT NULL], 
+	tipo [VARCHAR(45) , NOT NULL],
+	biografia [TEXT, NOT NULL],
+	musica-mais-conhecida [VARCHAR(45), NOT NULL],
+);
+
+CREATE TABLE usuarios (
+id INT [PRIMARY KEY UNIQUE, NOT NULL], 
+	email [VARCHAR(45) UNIQUE, NOT NULL],
+	senha [VARCHAR(45) UNIQUE, NOT NULL],
+	nome-completo [VARCHAR(70) UNIQUE, NOT NULL],
+	idade [INT, NOT NULL],
+	generos-preferidos [TEXT, NOT NULL],
+	data-criação [DATETIME, NOT NULL],
+	celular [VARCHAR(20) UNIQUE, NOT NULL],
+	plano  [VARCHAR(50) UNIQUE, NOT NULL],
+);
+https://docs.google.com/document/d/1AgIMZoROm6Mbr-WBZxdMUwdCHhchILwBu7ew4E1va64/edit?usp=sharing
+
